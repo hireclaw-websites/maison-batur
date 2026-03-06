@@ -19,6 +19,8 @@ const linkObserver = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => linkObserver.observe(section));
 
+document.documentElement.style.setProperty('--scroll', window.scrollY.toFixed(1));
+
 window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll', window.scrollY.toFixed(1));
 }, { passive: true });
